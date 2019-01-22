@@ -4,7 +4,7 @@
     "description": "",
     "main": "index.js",
     "scripts": {
-        "start": "nodemon --watch server -e js,html server/main.js",
+        "start": "node server/main.js",
         "start-dev": "killall -9 node;npm run start-server & npm run build-watch",
         "start-server": "nodemon --watch server -e js,html server/main.js",
         "build-watch": "webpack -w",
