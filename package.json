@@ -1,40 +1,41 @@
 {
-  "name": "juke",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "start": "killall -9 node;npm run start-server & npm run build-watch",
-    "start-server": "nodemon --watch server -e js,html server/main.js",
-    "build-watch": "webpack -w",
-    "seed": "node ./bin/seed",
-    "test": "DATABASE_URL='postgres://localhost:5432/juke_test' mocha -w tests",
-    "test-components": "mocha -w --require babel-core/register tests/components.spec.js"
-  },
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "axios": "^0.17.1",
-    "express": "^4.16.2",
-    "font-awesome": "^4.7.0",
-    "pg": "^7.4.1",
-    "pg-hstore": "^2.3.2",
-    "react": "^16.2.0",
-    "react-dom": "^16.2.0",
-    "sequelize": "^4.31.2",
-    "volleyball": "^1.5.1"
-  },
-  "devDependencies": {
-    "babel-core": "^6.26.3",
-    "babel-loader": "^7.1.2",
-    "babel-polyfill": "^6.26.0",
-    "babel-preset-env": "^1.7.0",
-    "babel-preset-react": "^6.24.1",
-    "chai": "^4.2.0",
-    "mocha": "^5.2.0",
-    "nodemon": "^1.18.4",
-    "supertest": "^3.3.0",
-    "webpack": "^4.20.2",
-    "webpack-cli": "^3.1.0"
-  }
+    "name": "juke",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "start": "nodemon --watch server -e js,html server/main.js",
+        "start-dev": "killall -9 node;npm run start-server & npm run build-watch",
+        "start-server": "nodemon --watch server -e js,html server/main.js",
+        "build-watch": "webpack -w",
+        "seed": "node ./bin/seed",
+        "test": "DATABASE_URL='postgres://localhost:5432/juke_test' mocha -w tests",
+        "test-components": "mocha -w --require babel-core/register tests/components.spec.js"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "axios": "^0.17.1",
+        "express": "^4.16.2",
+        "font-awesome": "^4.7.0",
+        "pg": "^7.4.1",
+        "pg-hstore": "^2.3.2",
+        "react": "^16.2.0",
+        "react-dom": "^16.2.0",
+        "sequelize": "^4.31.2",
+        "volleyball": "^1.5.1"
+    },
+    "devDependencies": {
+        "babel-core": "^6.26.3",
+        "babel-loader": "^7.1.2",
+        "babel-polyfill": "^6.26.0",
+        "babel-preset-env": "^1.7.0",
+        "babel-preset-react": "^6.24.1",
+        "chai": "^4.2.0",
+        "mocha": "^5.2.0",
+        "nodemon": "^1.18.4",
+        "supertest": "^3.3.0",
+        "webpack": "^4.20.2",
+        "webpack-cli": "^3.1.0"
+    }
 }
