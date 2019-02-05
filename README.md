@@ -1,3 +1,7 @@
+This app can be viewed at:
+
+http://inyc-juke.herokuapp.com
+
 # Juke
 
 ## Setup
